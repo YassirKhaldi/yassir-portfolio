@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- About Me Section -->
+<section class="pt-20 md:pt-28">
+  <div class="max-w-4xl mx-auto text-center px-4 mb-16">
+    <h1 class="text-4xl font-bold mb-4">About Me</h1>
+    <p class="text-lg md:text-xl text-gray-500">
+      Passionate Data Scientist at Evocenta GmbH with specialization in Machine Learning, 
+      Data Analysis, and AI Solutions. I focus on building AI-driven solutions and predictive analytics.
+    </p>
+  </div>
+
+  <!-- Expertise Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 max-w-6xl mx-auto">
+    <!-- Analyzing -->
+    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all">
+      <div class="text-blue-500 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3v18h18" />
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Analyzing</h3>
+      <p class="text-gray-600">
+        Specializing in extracting valuable insights from complex datasets using statistical 
+        analysis, data visualization, and exploratory data analysis techniques. 
+        Transforming raw data into actionable business intelligence.
+      </p>
+    </div>
+
+    <!-- Developing -->
+    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all">
+      <div class="text-blue-500 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Developing</h3>
+      <p class="text-gray-600">
+        Building and deploying robust machine learning models and data pipelines using Python, 
+        SQL, and cloud technologies. Implementing scalable solutions for real-world business problems.
+      </p>
+    </div>
+
+    <!-- Innovating -->
+    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all">
+      <div class="text-blue-500 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v18m9-9H3" />
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Innovating</h3>
+      <p class="text-gray-600">
+        Exploring cutting-edge AI technologies and methodologies to create innovative 
+        solutions. Staying at the forefront of advancements in machine learning, 
+        natural language processing, and computer vision.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- My Journey Section -->
+<section class="py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <img 
+        src="{{ url_for('static', filename='images/565A0333.jpg') }}" 
+        alt="Yassir Khaldi" 
+        class="rounded-lg shadow-lg w-full object-cover"
+      />
+    </div>
+    <div>
+      <h2 class="text-3xl font-semibold mb-6">My Journey</h2>
+      <p class="text-gray-600 mb-4">
+        As a Data Scientist at Evocenta GmbH, I've been working on innovative solutions that leverage 
+        the power of artificial intelligence and machine learning to solve complex business problems.
+      </p>
+      <p class="text-gray-600 mb-4">
+        My technical expertise includes Python, SQL, data visualization tools, and various machine learning frameworks. 
+        I'm passionate about finding patterns in data and translating them into actionable insights.
+      </p>
+      <p class="text-gray-600">
+        With a background in Computer Science from Westfälische Hochschule, I blend strong theoretical 
+        foundations with practical experience to deliver impactful data-driven solutions.
+      </p>
+    </div>
+  </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.getElementById("navbar");
+    
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 50) {
+                navbar.classList.add("backdrop-blur-md", "bg-background/80", "shadow-sm");
+            } else {
+                navbar.classList.remove("backdrop-blur-md", "bg-background/80", "shadow-sm");
+            }
+        });
+    });
+</script>
+{% endblock %}

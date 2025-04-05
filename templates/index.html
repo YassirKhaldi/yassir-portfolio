@@ -27,13 +27,13 @@
                 <!-- Social Media Icons -->
                 <div class="flex justify-center lg:justify-start space-x-6 mt-6">
                     <a href="https://github.com/YassirKhaldi" target="_blank" 
-                        class="text-gray-300 hover:text-blue-400 transition-colors">
+                        class="text-300 hover:text-blue-400 transition-colors">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 .297c-6.6 0-12 5.373-12 12 0 5.303 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577v-2.277c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.758-1.333-1.758-1.088-.743.083-.727.083-.727 1.205.085 1.84 1.236 1.84 1.236 1.07 1.834 2.81 1.303 3.495.996.107-.775.418-1.304.762-1.605-2.665-.302-5.467-1.338-5.467-5.947 0-1.313.469-2.384 1.236-3.227-.124-.303-.535-1.522.117-3.17 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.553 3.297-1.23 3.297-1.23.653 1.648.243 2.867.12 3.17.769.843 1.234 1.914 1.234 3.227 0 4.622-2.807 5.64-5.479 5.94.43.37.813 1.102.813 2.222v3.293c0 .32.193.693.8.576 4.765-1.588 8.2-6.084 8.2-11.385 0-6.627-5.373-12-12-12z"/>
                         </svg>
                     </a>
                     <a href="https://www.linkedin.com/in/yassir-khaldi-a8a480252/" target="_blank" 
-                        class="text-gray-300 hover:text-blue-400 transition-colors">
+                        class="text-300 hover:text-blue-400 transition-colors">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.49c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.49h-3v-5.6c0-3.39-4-3.13-4 0v5.6h-3v-10h3v1.3c1.4-2.6 7-2.79 7 2.5v6.2z"/>
                         </svg>
@@ -47,19 +47,23 @@
                     <img src="{{ url_for('static', filename='images/565A0333.jpg') }}" 
                         alt="Yassir Khaldi" class="w-full h-full object-cover">
                 </div>
-
-                <!-- Animated Blue Circle -->
-                <div class="absolute bottom-2 right-2 bg-gray-800 p-3 rounded-full border border-gray-700 shadow-lg">
-                    <div class="bg-blue-400 p-2 rounded-full">
-                        <span class="flex h-6 w-6 relative">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-30"></span>
-                            <span class="relative inline-flex rounded-full h-6 w-6 bg-blue-400"></span>
-                        </span>
-                    </div>
-                </div>
             </div>
 
         </div>
     </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.getElementById("navbar");
+    
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 50) {
+                navbar.classList.add("backdrop-blur-md", "bg-background/80", "shadow-sm");
+            } else {
+                navbar.classList.remove("backdrop-blur-md", "bg-background/80", "shadow-sm");
+            }
+        });
+    });
+</script>
+    
 {% endblock %}
