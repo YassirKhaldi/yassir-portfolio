@@ -16,9 +16,7 @@
     <!-- Analyzing -->
     <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all">
       <div class="text-blue-500 mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3v18h18" />
-        </svg>
+        <i class="fas fa-chart-line text-4xl"></i>
       </div>
       <h3 class="text-xl font-semibold mb-2">Analyzing</h3>
       <p class="text-gray-600">
@@ -31,9 +29,7 @@
     <!-- Developing -->
     <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all">
       <div class="text-blue-500 mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
-        </svg>
+        <i class="fas fa-cogs text-4xl"></i>
       </div>
       <h3 class="text-xl font-semibold mb-2">Developing</h3>
       <p class="text-gray-600">
@@ -45,9 +41,7 @@
     <!-- Innovating -->
     <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all">
       <div class="text-blue-500 mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v18m9-9H3" />
-        </svg>
+        <i class="fas fa-lightbulb text-4xl"></i>
       </div>
       <h3 class="text-xl font-semibold mb-2">Innovating</h3>
       <p class="text-gray-600">
@@ -86,17 +80,4 @@
     </div>
   </div>
 </section>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const navbar = document.getElementById("navbar");
-    
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 50) {
-                navbar.classList.add("backdrop-blur-md", "bg-background/80", "shadow-sm");
-            } else {
-                navbar.classList.remove("backdrop-blur-md", "bg-background/80", "shadow-sm");
-            }
-        });
-    });
-</script>
 {% endblock %}

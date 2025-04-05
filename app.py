@@ -14,5 +14,9 @@ def about():
 def contact():
     return render_template("contact.html", current_year=2025)
 
+@app.route("/resume")
+def resume():
+    return render_template("resume.html", current_year=2025)
+
 if __name__ == "__main__":
     app.run(debug=True)

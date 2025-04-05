@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yassir Khaldi | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-[rgb(245,248,250)] text-foreground">
@@ -15,5 +17,18 @@
     </main>
 
     {% include 'footer.html' %}
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.getElementById("navbar");
+        
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("backdrop-blur-md", "bg-background/80", "shadow-sm");
+                } else {
+                    navbar.classList.remove("backdrop-blur-md", "bg-background/80", "shadow-sm");
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,5 +1,76 @@
 {% extends "base.html" %}
-
 {% block content %}
+
+<!-- Contact Section -->
+<section class="pt-20 md:pt-28">
+  <div class="max-w-4xl mx-auto text-center px-4 mb-16">
+    <h1 class="text-4xl font-bold mb-4">Get In Touch</h1>
+    <p class="text-lg md:text-xl text-gray-500">Have a question or want to work together? Feel free to contact me!</p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 px-4 max-w-6xl mx-auto">
+    <!-- Message Form -->
+    <div class="bg-white rounded-2xl shadow-md p-10">
+        <h2 class="text-2xl font-bold mb-6">Send Me a Message</h2>
+        <form action="https://formspree.io/f/xwpknnvg" method="post" class="space-y-6">
+         <div class="p-4 rounded-md">
+            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+            <input type="text" name="name" id="name" placeholder="Your name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 bg-[rgb(245,248,250)] p-3" required>
+          </div>
+          <div class="p-4 rounded-md">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" name="email" id="email" placeholder="Your email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 bg-[rgb(245,248,250)] p-3" required>
+          </div>
+          <div class="p-4 rounded-md">
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea name="message" id="message" placeholder="Your message" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 bg-[rgb(245,248,250)] p-3 resize-none min-h-[150px]" required></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-500 text-white font-semibold py-2 rounded-md hover:bg-blue-600">Send Message</button>
+        </form>
+      </div>  
+
+    <!-- Contact Information -->
+    <div class="flex flex-col">
+      <div class="mb-8">
+        <h2 class="text-2xl font-semibold mb-6">Contact Information</h2>
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <i class="fas fa-envelope text-blue-500 mr-4"></i>
+            <div>
+              <h3 class="font-medium">Email</h3>
+              <a href="mailto:yassirkhaldi0@gmail.com" class="text-gray-600 hover:text-blue-500 transition-colors">yassirkhaldi0@gmail.com</a>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-phone text-blue-500 mr-4"></i>
+            <div>
+              <h3 class="font-medium">Phone</h3>
+              <p class="text-gray-600">+4915734717915</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-map-marker-alt text-blue-500 mr-4"></i>
+            <div>
+              <h3 class="font-medium">Location</h3>
+              <p class="text-gray-600">Gelsenkirchen, Germany</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-grow flex items-center justify-center">
+        <div class="relative rounded-lg overflow-hidden shadow-lg w-full max-w-md h-[350px]">
+          <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Yassir Khaldi" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end">
+            <div class="p-6">
+              <h3 class="text-white text-2xl font-semibold">Yassir Khaldi</h3>
+              <p class="text-white/80">Data Scientist</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}

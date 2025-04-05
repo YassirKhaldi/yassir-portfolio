@@ -1,5 +1,177 @@
 {% extends "base.html" %}
-
 {% block content %}
+
+<!-- Resume Section -->
+<section class="pt-20 md:pt-28">
+  <div class="max-w-6xl mx-auto px-4 mb-16">
+    <h1 class="text-4xl font-bold mb-4">Resume</h1>
+    <p class="text-lg md:text-xl text-gray-500 mb-6">My professional experience, education, and skills</p>
+  </div>
+
+  <!-- Experience Section -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 px-4 max-w-6xl mx-auto">
+    <div>
+      <h2 class="text-2xl font-semibold mb-4 flex items-center">
+        <i class="fas fa-briefcase w-6 h-6 mr-2 text-blue-400"></i>
+        Experience
+      </h2>
+      
+      <div class="bg-white rounded-2xl shadow-md p-6 mb-4 transition-transform transform hover:scale-105">
+        <div class="flex justify-between items-center">
+          <h3 class="text-xl font-semibold cursor-pointer">Junior Data Scientist</h3>
+          <span class="bg-[rgb(245,248,250)] text-blue-400 px-3 py-1 rounded-full">November 2024 - Present</span>
+        </div>
+        <p class="text-gray-600 mt-2">Evocenta GmbH - Gelsenkirchen, Germany</p>
+        <p class="text-gray-600 mt-2">
+          Evocenta GmbH is an innovative service provider specializing in the automation of business processes across various industries. With its proprietary AI agent EMMA®, they offer highly automated and intelligent solutions for optimizing service center operations.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mt-2 space-y-1">
+          <li>Analyze large, often unstructured data sets to gain valuable insights.</li>
+          <li>Collect, cleanse, prepare, and analyze data for various application areas.</li>
+          <li>Visualize and interpret analysis results to support data-driven decisions.</li>
+          <li>Identify patterns in data and make predictions and decisions based on them.</li>
+          <li>Develop innovative analytical methods to improve data processing and analysis.</li>
+          <li>Implement systems for monitoring and tracking data processes.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md p-6 mb-4 transition-transform transform hover:scale-105">
+        <div class="flex justify-between items-center">
+          <h3 class="text-xl font-semibold cursor-pointer">Student AI Developer</h3>
+          <span class="bg-[rgb(245,248,250)] text-blue-400 px-3 py-1 rounded-full">September 2023 - October 2024</span>
+        </div>
+        <p class="text-gray-600 mt-2">Evocenta GmbH - Gelsenkirchen, Germany</p>
+        <ul class="list-disc list-inside text-gray-600 mt-2 space-y-1">
+          <li>Developed and implemented Python scripts for data processing using libraries such as NumPy, Pandas, Matplotlib, and scikit-learn.</li>
+          <li>Used AI tools for data creation, classification, and evaluation of AI models.</li>
+          <li>Connected and managed PostgreSQL databases using Python and SQL, including working with pgAdmin for data collection.</li>
+          <li>Tested and evaluated data processing and AI processes using Python.</li>
+          <li>Followed SCRUM practices; participated in grooming sessions, sprint planning, dailies, client meetings, and retrospectives.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-4 flex items-center">
+        <i class="fas fa-graduation-cap w-6 h-6 mr-2 text-blue-400"></i>
+        Education
+      </h2>
+      <div class="bg-white rounded-2xl shadow-md p-6 mb-4 transition-transform transform hover:scale-105">
+        <div class="flex justify-between items-center">
+          <h3 class="text-xl font-semibold cursor-pointer">B.Sc. in Computer Science</h3>
+          <span class="bg-[rgb(245,248,250)] text-blue-400 px-3 py-1 rounded-full">09/2021 - 09/2024</span>
+        </div>
+        <p class="text-gray-600 mt-2">Westfälische Hochschule, Gelsenkirchen</p>
+        <ul class="list-disc list-inside text-gray-600 mt-2 space-y-1">
+          <li>Specialization: Applied Computer Science</li>
+          <li>Grade: 2.1</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="mt-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 max-w-6xl mx-auto">
+      <!-- Technical Skills -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4 flex items-center">
+            <i class="fas fa-laptop-code w-6 h-6 mr-2 text-blue-400"></i>
+            Technical Skills
+        </h3>
+        <div class="flex justify-between mb-1">
+          <span class="font-medium">Python</span>
+          <span class="text-gray-500">95%</span>
+        </div>
+        <div class="bg-gray-200 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full" style="width: 95%;"></div>
+        </div>
+
+        <div class="flex justify-between mb-1 mt-4">
+          <span class="font-medium">SQL</span>
+          <span class="text-gray-500">90%</span>
+        </div>
+        <div class="bg-gray-200 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full" style="width: 90%;"></div>
+        </div>
+
+        <div class="flex justify-between mb-1 mt-4">
+          <span class="font-medium">Data Visualization</span>
+          <span class="text-gray-500">85%</span>
+        </div>
+        <div class="bg-gray-200 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full" style="width: 85%;"></div>
+        </div>
+
+        <div class="flex justify-between mb-1 mt-4">
+          <span class="font-medium">Machine Learning</span>
+          <span class="text-gray-500">80%</span>
+        </div>
+        <div class="bg-gray-200 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full" style="width: 80%;"></div>
+        </div>
+
+        <div class="flex justify-between mb-1 mt-4">
+          <span class="font-medium">Deep Learning</span>
+          <span class="text-gray-500">75%</span>
+        </div>
+        <div class="bg-gray-200 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full" style="width: 75%;"></div>
+        </div>
+      </div>
+
+      <!-- Language Skills -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4 flex items-center">
+            <i class="fas fa-comments w-6 h-6 mr-2 text-blue-400"></i>
+            Language Skills
+        </h3>                  
+        <div class="flex justify-between mb-1">
+          <span class="font-medium">Arabic</span>
+          <span class="text-gray-500">Native</span>
+        </div>
+        <div class="bg-gray-200 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full" style="width: 100%;"></div>
+        </div>
+
+        <div class="flex justify-between mb-1 mt-4">
+          <span class="font-medium">English</span>
+          <span class="text-gray-500">Fluent</span>
+        </div>
+        <div class="bg-gray-200 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full" style="width: 95%;"></div>
+        </div>
+
+        <div class="flex justify-between mb-1 mt-4">
+          <span class="font-medium">German</span>
+          <span class="text-gray-500">Fluent</span>
+        </div>
+        <div class="bg-gray-200 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full" style="width: 95%;"></div>
+        </div>
+
+        <div class="flex justify-between mb-1 mt-4">
+          <span class="font-medium">French</span>
+          <span class="text-gray-500">Advanced</span>
+        </div>
+        <div class="bg-gray-200 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full" style="width: 80%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleDetails(id) {
+    const details = document.getElementById(id);
+    if (details.classList.contains('hidden')) {
+      details.classList.remove('hidden');
+    } else {
+      details.classList.add('hidden');
+    }
+  }
+</script>
 
 {% endblock %}
