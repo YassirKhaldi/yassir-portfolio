@@ -2,15 +2,15 @@
 {% block content %}
 
 <!-- Contact Section -->
-<section class="pt-20 md:pt-28">
-  <div class="max-w-4xl mx-auto text-center px-4 mb-16">
+<section class="pt-20 md:pt-28" data-aos="fade-in" data-aos-duration="1000">
+  <div class="description-card max-w-4xl mx-auto text-center px-4 mb-16">
     <h1 class="text-4xl font-bold mb-4">Get In Touch</h1>
     <p class="text-lg md:text-xl text-gray-500">Have a question or want to work together? Feel free to contact me!</p>
   </div>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 px-4 max-w-6xl mx-auto">
     <!-- Message Form -->
-    <div class="bg-white rounded-2xl shadow-md p-10">
+    <div class="expertise-card bg-white rounded-2xl shadow-md p-10" data-aos="fade-up" data-aos-duration="1000">
         <h2 class="text-2xl font-bold mb-6">Send Me a Message</h2>
         <form action="https://formspree.io/f/xwpknnvg" method="post" class="space-y-6">
          <div class="p-4 rounded-md">
@@ -30,35 +30,37 @@
       </div>  
 
     <!-- Contact Information -->
-    <div class="flex flex-col">
-      <div class="mb-8">
-        <h2 class="text-2xl font-semibold mb-6">Contact Information</h2>
-        <div class="space-y-4">
-          <div class="flex items-start">
-            <i class="fas fa-envelope text-blue-500 mr-4"></i>
-            <div>
-              <h3 class="font-medium">Email</h3>
-              <a href="mailto:yassirkhaldi0@gmail.com" class="text-gray-600 hover:text-blue-500 transition-colors">yassirkhaldi0@gmail.com</a>
+    <div class="flex flex-col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <div class="flex ml-8 mb-8">
+        <div>
+          <h2 class="text-2xl font-semibold mb-6">Contact Information</h2>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <i class="fas fa-envelope text-blue-500 mr-4"></i>
+              <div>
+                <h3 class="font-medium">Email</h3>
+                <a href="mailto:yassirkhaldi0@gmail.com" class="text-gray-500 hover:text-blue-500 transition-colors">yassirkhaldi0@gmail.com</a>
+              </div>
             </div>
-          </div>
-          <div class="flex items-start">
-            <i class="fas fa-phone text-blue-500 mr-4"></i>
-            <div>
-              <h3 class="font-medium">Phone</h3>
-              <p class="text-gray-600">+4915734717915</p>
+            <div class="flex items-start">
+              <i class="fas fa-phone text-blue-500 mr-4"></i>
+              <div>
+                <h3 class="font-medium">Phone</h3>
+                <p class="text-gray-500">+4915734717915</p>
+              </div>
             </div>
-          </div>
-          <div class="flex items-start">
-            <i class="fas fa-map-marker-alt text-blue-500 mr-4"></i>
-            <div>
-              <h3 class="font-medium">Location</h3>
-              <p class="text-gray-600">Gelsenkirchen, Germany</p>
+            <div class="flex items-start">
+              <i class="fas fa-map-marker-alt text-blue-500 mr-4"></i>
+              <div>
+                <h3 class="font-medium">Location</h3>
+                <p class="text-gray-500">Gelsenkirchen, Germany</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="flex-grow flex items-center justify-center">
+    
+      <div class="flex-grow flex items-center justify-center" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400">
         <div class="relative rounded-lg overflow-hidden shadow-lg w-full max-w-md h-[350px]">
           <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Yassir Khaldi" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end">
@@ -69,8 +71,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>    
   </div>
 </section>
-
+<script>
+  // Initialize AOS (Animate On Scroll) -  Remember to include AOS in your base.html
+  AOS.init();
+</script>
 {% endblock %}

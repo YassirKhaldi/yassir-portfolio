@@ -8,6 +8,64 @@
     <!-- Font Awesome CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode,
+        body.dark-mode .expertise-card input,
+        body.dark-mode .expertise-card textarea {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        /* Footer Dark Mode Styles */
+        body.dark-mode footer {
+            background-color: rgb(28, 28, 34);
+        }
+
+        body.dark-mode footer .text-gray-500,
+        body.dark-mode .text-gray-500 {
+            color: rgb(185, 191, 201); /* Tailwind's gray-400 */
+        }
+
+        body.dark-mode footer .border-border {
+            border-color: #3f3f46; /* A darker gray for borders in dark mode */
+        }
+
+        /* Additional footer border-color update */
+        body.dark-mode footer {
+            border-top: 1px solid #3f3f46; /* Ensure the border color is updated */
+        }
+
+        /* Expertise Cards Dark Mode Styles */
+        body.dark-mode .expertise-card {
+            background-color: rgb(28, 28, 34); /* Dark background */
+            color: rgb(120, 134, 160); /* Light blue-ish text color */
+        }
+
+        body.dark-mode .expertise-card h3, 
+        body.dark-mode .expertise-card h2,
+        body.dark-mode .expertise-card label{
+            color: white; /* Title color */
+        }
+
+        body.dark-mode .expertise-card span{
+            background-color: rgb(36 41 57); /* date color */
+        }
+
+        body.dark-mode .expertise-card p,
+        body.dark-mode .expertise-card ul,
+        body.dark-mode .description-card p,
+        body.dark-mode .journey-card p,
+        body.dark-mode .main-card p{
+            color: rgb(185, 191, 201); /* Light grayish text for description */
+        }
+    </style>
 </head>
 <body class="bg-[rgb(245,248,250)] text-foreground">
     {% include 'navbar.html' %}
@@ -30,5 +88,33 @@
             });
         });
     </script>
+    <script>
+        function toggleTheme() {
+          const body = document.body;
+          const icon = document.getElementById('theme-icon');
+          const isDark = body.classList.toggle('dark-mode');
+      
+          // Toggle icon
+          if (isDark) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            localStorage.setItem('theme', 'dark');
+          } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            localStorage.setItem('theme', 'light');
+          }
+        }
+      
+        window.addEventListener('DOMContentLoaded', () => {
+          const savedTheme = localStorage.getItem('theme');
+          const icon = document.getElementById('theme-icon');
+          if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+          }
+        });
+      </script>      
 </body>
 </html>

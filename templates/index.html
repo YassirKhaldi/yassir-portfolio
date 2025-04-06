@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="min-h-[85vh] flex items-center justify-center">
+<section class="min-h-[85vh] flex items-center justify-center" id="home">
     <div class="container mx-auto px-4 lg:px-16">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
+
             <!-- Left Section: Text & Buttons -->
-            <div class="order-2 lg:order-1 text-center lg:text-left">
+            <div class="main-card order-2 lg:order-1 text-center lg:text-left" data-aos="fade-up" data-aos-duration="1000">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
                     Hi, I'm <span class="text-blue-400">Yassir Khaldi</span>
                 </h1>
@@ -14,38 +14,38 @@
                     Welcome to My Portfolio – Explore my skills, projects, and professional journey.
                 </p>
 
-                <!-- Contact Button -->
-                <a href="/contact" class="inline-flex items-center bg-blue-500 px-6 py-3 rounded-lg 
-                    text-white hover:bg-blue-700 transition-all text-lg font-semibold">
+                <!-- Contact Button (with smooth transition) -->
+                <a href="/contact" class="inline-flex items-center bg-blue-500 px-6 py-3 rounded-lg text-white hover:bg-blue-700 transition-all duration-300 ease-in-out text-lg font-semibold">
                     Contact Me
-                    <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" 
-                        viewBox="0 0 24 24">
+                    <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </a>
 
-                <!-- Social Media Icons -->
+                <!-- Social Media Icons (with hover effects) -->
                 <div class="flex justify-center lg:justify-start space-x-6 mt-6">
-                    <a href="https://github.com/YassirKhaldi" target="_blank" 
-                        class="text-300 hover:text-blue-400 transition-colors">
-                        <i class="fab fa-github w-10 h-10 text-4xl"></i> <!-- Bigger icon -->
+                    <a href="https://github.com/YassirKhaldi" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 ease-in-out">
+                        <i class="fab fa-github w-10 h-10 text-4xl"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/yassir-khaldi-a8a480252/" target="_blank" 
-                        class="text-300 hover:text-blue-400 transition-colors">
-                        <i class="fab fa-linkedin w-10 h-10 text-4xl"></i> <!-- Bigger icon -->
+                    <a href="https://www.linkedin.com/in/yassir-khaldi-a8a480252/" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 ease-in-out">
+                        <i class="fab fa-linkedin w-10 h-10 text-4xl"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Right Section: Profile Image -->
-            <div class="order-1 lg:order-2 flex justify-center relative">
+            <!-- Right Section: Profile Image (with animation) -->
+            <div class="order-1 lg:order-2 flex justify-center relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-blue-400 shadow-lg">
-                    <img src="{{ url_for('static', filename='images/565A0333.jpg') }}" 
-                        alt="Yassir Khaldi" class="w-full h-full object-cover">
+                    <img src="{{ url_for('static', filename='images/565A0333.jpg') }}" alt="Yassir Khaldi" class="w-full h-full object-cover">
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
+<script>
+  // Initialize AOS (Animate On Scroll) - Remember to include AOS in your base.html
+  AOS.init();
+</script>
 {% endblock %}

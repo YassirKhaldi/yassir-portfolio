@@ -2,82 +2,72 @@
 {% block content %}
 
 <!-- About Me Section -->
-<section class="pt-20 md:pt-28">
-  <div class="max-w-4xl mx-auto text-center px-4 mb-16">
-    <h1 class="text-4xl font-bold mb-4">About Me</h1>
-    <p class="text-lg md:text-xl text-gray-500">
-      Passionate Data Scientist at Evocenta GmbH with specialization in Machine Learning, 
-      Data Analysis, and AI Solutions. I focus on building AI-driven solutions and predictive analytics.
+<section class="pt-20 md:pt-28" id="about">
+<div class="description-card max-w-4xl mx-auto text-center px-4 mb-16">
+  <h1 class="text-4xl font-bold mb-4">About Me</h1>
+  <p class="text-lg md:text-xl text-gray-500">
+    Passionate Data Scientist at Evocenta GmbH specializing in Machine Learning, Data Analysis, and AI Solutions. I focus on building AI-driven solutions and predictive analytics.
+  </p>
+</div>
+
+<!-- Expertise Cards (with hover effects) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 max-w-6xl mx-auto">
+  {% for expertise in ['Analyzing', 'Developing', 'Innovating'] %}
+  <div class="expertise-card bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all hover:scale-105 transform duration-300 ease-in-out">
+    <div class="text-blue-500 mb-4">
+      {% if expertise == 'Analyzing' %}
+        <i class="fas fa-chart-line text-4xl"></i>
+      {% elif expertise == 'Developing' %}
+        <i class="fas fa-cogs text-4xl"></i>
+      {% elif expertise == 'Innovating' %}
+        <i class="fas fa-lightbulb text-4xl"></i>
+      {% endif %}
+    </div>
+    <h3 class="text-xl font-semibold mb-2">{{ expertise }}</h3>
+    <p class="text-gray-600">
+      {% if expertise == 'Analyzing' %}
+        Specializing in extracting valuable insights from complex datasets using statistical analysis, data visualization, and exploratory data analysis techniques. Transforming raw data into actionable business intelligence.
+      {% elif expertise == 'Developing' %}
+        Building and deploying robust machine learning models and data pipelines using Python, SQL, and cloud technologies. Implementing scalable solutions for real-world business problems.
+      {% elif expertise == 'Innovating' %}
+        Exploring cutting-edge AI technologies and methodologies to create innovative solutions. Staying at the forefront of advancements in machine learning, natural language processing, and computer vision.
+      {% endif %}
     </p>
   </div>
-
-  <!-- Expertise Cards -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 max-w-6xl mx-auto">
-    <!-- Analyzing -->
-    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all">
-      <div class="text-blue-500 mb-4">
-        <i class="fas fa-chart-line text-4xl"></i>
-      </div>
-      <h3 class="text-xl font-semibold mb-2">Analyzing</h3>
-      <p class="text-gray-600">
-        Specializing in extracting valuable insights from complex datasets using statistical 
-        analysis, data visualization, and exploratory data analysis techniques. 
-        Transforming raw data into actionable business intelligence.
-      </p>
-    </div>
-
-    <!-- Developing -->
-    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all">
-      <div class="text-blue-500 mb-4">
-        <i class="fas fa-cogs text-4xl"></i>
-      </div>
-      <h3 class="text-xl font-semibold mb-2">Developing</h3>
-      <p class="text-gray-600">
-        Building and deploying robust machine learning models and data pipelines using Python, 
-        SQL, and cloud technologies. Implementing scalable solutions for real-world business problems.
-      </p>
-    </div>
-
-    <!-- Innovating -->
-    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-all">
-      <div class="text-blue-500 mb-4">
-        <i class="fas fa-lightbulb text-4xl"></i>
-      </div>
-      <h3 class="text-xl font-semibold mb-2">Innovating</h3>
-      <p class="text-gray-600">
-        Exploring cutting-edge AI technologies and methodologies to create innovative 
-        solutions. Staying at the forefront of advancements in machine learning, 
-        natural language processing, and computer vision.
-      </p>
-    </div>
-  </div>
+  {% endfor %}
+</div>
 </section>
 
-<!-- My Journey Section -->
-<section class="py-16 md:py-24">
-  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-    <div>
+<!-- My Journey Section (with animation) -->
+<section class="py-16 md:py-24" id="journey">
+  <div class="journey-card max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="relative">
       <img 
         src="{{ url_for('static', filename='images/565A0333.jpg') }}" 
         alt="Yassir Khaldi" 
         class="rounded-lg shadow-lg w-full object-cover"
+        data-aos="fade-up"
+        data-aos-duration="1000"
       />
     </div>
-    <div>
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
       <h2 class="text-3xl font-semibold mb-6">My Journey</h2>
       <p class="text-gray-600 mb-4">
-        As a Data Scientist at Evocenta GmbH, I've been working on innovative solutions that leverage 
-        the power of artificial intelligence and machine learning to solve complex business problems.
+        As a Data Scientist at Evocenta GmbH, I've been working on innovative solutions that leverage the power of artificial intelligence and machine learning to solve complex business problems.
       </p>
       <p class="text-gray-600 mb-4">
-        My technical expertise includes Python, SQL, data visualization tools, and various machine learning frameworks. 
-        I'm passionate about finding patterns in data and translating them into actionable insights.
+        My technical expertise includes Python, SQL, data visualization tools, and various machine learning frameworks. I'm passionate about finding patterns in data and translating them into actionable insights.
       </p>
       <p class="text-gray-600">
-        With a background in Computer Science from Westfälische Hochschule, I blend strong theoretical 
-        foundations with practical experience to deliver impactful data-driven solutions.
+        With a background in Computer Science from Westfälische Hochschule, I blend strong theoretical foundations with practical experience to deliver impactful data-driven solutions.
       </p>
     </div>
   </div>
 </section>
+
+<script>
+  // Initialize AOS (Animate On Scroll) -  Remember to include AOS in your base.html
+  AOS.init();
+</script>
+
 {% endblock %}
