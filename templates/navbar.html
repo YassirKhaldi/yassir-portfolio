@@ -1,32 +1,61 @@
 <!-- Navbar -->
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
     <div class="max-w-6xl mx-auto px-6 sm:px-18">
-        <div class="flex justify-start items-center py-4 md:py-6 gap-x-24">
+        <div class="flex justify-between items-center py-4 md:py-6">
             <!-- Logo -->
             <div class="text-3xl font-heading font-bold">
                 <a href="/" class="transition-colors hover:text-blue-400">YK</a>
             </div>
+
+            <!-- Hamburger Icon -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-3xl focus:outline-none">
+                    <i class="fas fa-bars text-blue-400"></i>
+                </button>
+            </div>
+
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-10 ml-auto">
+            <nav class="hidden md:flex items-center space-x-10">
                 <a href="/" class="text-s transition-colors hover:text-blue-400">Home</a>
                 <a href="/about" class="text-s transition-colors hover:text-blue-400">About</a>
                 <a href="/resume" class="text-s transition-colors hover:text-blue-400">Resume</a>
                 <a href="/contact" class="text-s transition-colors hover:text-blue-400">Contact</a>
-                <!-- Social Media Icons -->
-                <a href="https://github.com/YassirKhaldi" target="_blank" 
-                    class="text-300 hover:text-blue-400 transition-colors">
-                    <i class="fab fa-github w-8 h-8 text-2xl"></i>
+                <a href="https://github.com/YassirKhaldi" target="_blank" class="hover:text-blue-400">
+                    <i class="fab fa-github text-2xl"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/yassir-khaldi-a8a480252/" target="_blank" 
-                    class="text-300 hover:text-blue-400 transition-colors">
-                    <i class="fab fa-linkedin w-8 h-8 text-2xl"></i>
+                <a href="https://www.linkedin.com/in/yassir-khaldi-a8a480252/" target="_blank" class="hover:text-blue-400">
+                    <i class="fab fa-linkedin text-2xl"></i>
                 </a>
-                <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode"
-                    class="text-300 hover:text-blue-400 transition-colors">
+                <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode" class="hover:text-blue-400">
                     <i id="theme-icon" class="fas fa-moon"></i>
                 </button>
             </nav>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden flex-col mt-4 space-y-4">
+            <a href="/" class="block text-s hover:text-blue-400">Home</a>
+            <a href="/about" class="block text-s hover:text-blue-400">About</a>
+            <a href="/resume" class="block text-s hover:text-blue-400">Resume</a>
+            <a href="/contact" class="block text-s hover:text-blue-400">Contact</a>
+            <a href="https://github.com/YassirKhaldi" target="_blank" class="block hover:text-blue-400">
+                <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yassir-khaldi-a8a480252/" target="_blank" class="block hover:text-blue-400">
+                <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+            <button id="theme-toggle-mobile" onclick="toggleTheme()" aria-label="Toggle dark/light mode" class="hover:text-blue-400">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </div>
 </nav>
 
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+</script>
